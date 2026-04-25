@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laberinto de la Honestidad</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="game-container">
+        <header>
+            <h1>Laberinto de la Integridad</h1>
+            <p class="subtitle">Encuentra tu camino. La honestidad es la clave.</p>
+            <div class="stats">
+                <div class="stat-box">
+                    <span class="label">Honor</span>
+                    <span class="value" id="honorDisplay">100%</span>
+                </div>
+                <div class="stat-box">
+                    <span class="label">Atajos Tomados</span>
+                    <span class="value" id="shortcutsDisplay">0</span>
+                </div>
+            </div>
+        </header>
+        
+        <main>
+            <div class="canvas-wrapper">
+                <canvas id="gameCanvas" width="630" height="630"></canvas>
+            </div>
+            <div id="overlay">
+                <div class="modal">
+                    <h2 id="modalTitle">Instrucciones</h2>
+                    <div id="modalInstructions" class="instructions-box">
+                        <p>🕹️ Usa las <b>flechas del teclado</b> para moverte.</p>
+                        <p>⚠️ Cuidado con las paredes rojas: son atajos tentadores que te permitirán avanzar rápido, pero <b>romperán las reglas y restarán tu honor</b>.</p>
+                        <p>⭐ El verdadero ganador es aquel que llega a la meta (círculo dorado) conservando el 100% de su integridad.</p>
+                    </div>
+                    <p id="modalText" class="hidden-element"></p>
+                    <button id="actionBtn">Empezar a Jugar</button>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
